@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longitudinal Visualizations</title>
+    <link rel="stylesheet" href="index.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [['\\[', '\\]']],
+            processEscapes: true
+        },
+        "HTML-CSS": { scale: 90 },
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js" integrity="sha512-7xTD1meeGGoAzwZKA0Z8YelV3qAvRltuwACWXpnxtneF7VAMztOTAi3t4laVSaE4Znq4LMPeGUIYWEvKEk5r3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js" integrity="sha512-S6SXKUZ11xkCoD/UuhdXG4B4iiCXng+xW2KCx0lgfQqmdqtjqGgm4WChdYIhO1F/CmH21vnkSUvPEgXNgDwkjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://d3js.org/d3.v6.js"></script>
+<script src="index.js" defer></script>
+</head>
+<body>
+
+    <div class="intro">
+        <canvas id="heart"></canvas>
+    </div>
+    <div class="work">
+    <div class="night">
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <h1>Line Plots</h1>
+        </div>
+        <!-- <div class="outer"></div> -->
+            <div class="filter">
+                <label for="indicatorSelect">Choose an Indicator:</label>
+                <select id="indicatorSelect"></select>
+                <label for="characteristicsSelect">Choose Characteristics:</label>
+                <select id="characteristicsSelect"></select>
+            </div>
+        <div class="inner">
+            <div class="graph"></div>
+        </div>
+        <div class="header">
+            <h1>Spaghetti Plot</h1>
+        </div>
+        <img src="img1.png" alt="">
+        <div class="header">
+            <h1>Interactive Spaghetti Plot</h1>
+        </div>
+        <iframe src="index1.html" frameborder="0"></iframe>
+        <div class="header">
+            <h1>Incorporating Groups</h1>
+        </div>
+        <iframe src="index2.html" frameborder="0"></iframe>
+        <div class="header">
+            <h1>Interactive Line/Density Plot</h1>
+        </div>
+        <iframe src="index3.html" frameborder="0"></iframe>
+        <div class="header">
+            <h1>Trajectories with Groups</h1>
+        </div>
+        <img src="img10.png" alt="">
+        <div class="header">
+            <h1>Mean Plots</h1>
+        </div>
+        <img src="img2.png" alt="">
+        <div class="header">
+            <h1>Incorporating Uncertainty within a Mean Plot</h1>
+        </div>
+        <img src="img3.png" alt="">
+        <div class="header">
+            <h1>Comparing Densities across time</h1>
+        </div>
+        <img src="img4.png" alt="">
+        <div class="header">
+            <h1>Comparing Densities with a Ridgeline chart</h1>
+        </div>
+        <img src="img5.png" alt="">
+        <div class="header">
+            <h1>Traditional Box Plot</h1>
+        </div>
+        <img src="img6.png" alt="">
+        <div class="header">
+            <h1>Violin Plot</h1>
+        </div>
+        <img src="img7.png" alt="">
+        <div class="header">
+            <h1>RainCloud Plot</h1>
+        </div>
+        <img src="img8.png" alt="">
+        <div class="header">
+            <h1>Heat Map</h1>
+        </div>
+        <img src="img9.png" alt="">
+        <div class="header">
+            <h1>Contour Plot</h1>
+        </div>
+        <img src="img11.png" alt="">
+        <div class="header">
+            <h1>2d Density Plot</h1>
+        </div>
+        <img src="img12.png" alt="">
+
+
+    </div>
+</div>
+</body>
+</html>
