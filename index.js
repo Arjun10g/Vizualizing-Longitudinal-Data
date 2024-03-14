@@ -274,5 +274,11 @@ else document.addEventListener('DOMContentLoaded', init, false);
 
 
 
+let lists = document.querySelectorAll('.info');
 
-
+lists.forEach(list => {
+    list.addEventListener('click', () => {
+        gsap.to(list, {opacity: 0,duration: 1});
+        gsap.set(list, {display: 'none', delay: 1});
+    })
+});
